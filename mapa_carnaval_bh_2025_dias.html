@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_29e3dcf3344476b45b386ec71645fd51 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>
+    
+    
+     <div style="position: fixed; 
+     bottom: 50px; left: 50px; width: 150px; height: 150px; 
+     border:2px solid grey; z-index:9999; font-size:14px;
+     background-color:white; padding:10px;">
+     <b>Legenda:</b><br>
+     <i class="fa fa-map-marker" style="color:red"></i> Sexta-feira (28/02)<br>
+     <i class="fa fa-map-marker" style="color:blue"></i> Sábado (01/03)<br>
+     <i class="fa fa-map-marker" style="color:green"></i> Domingo (02/03)<br>
+     <i class="fa fa-map-marker" style="color:orange"></i> Segunda-feira (03/03)<br>
+     <i class="fa fa-map-marker" style="color:purple"></i> Terça-feira (04/03)<br>
+     </div>
+    
+            <div class="folium-map" id="map_29e3dcf3344476b45b386ec71645fd51" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_29e3dcf3344476b45b386ec71645fd51 = L.map(
+                "map_29e3dcf3344476b45b386ec71645fd51",
+                {
+                    center: [-19.9232, -43.9418],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 13,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_71b329f46eefc1be37ce7f73d1d2ea22 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_29e3dcf3344476b45b386ec71645fd51);
+        
+    
+            var marker_ae882cbda7807b83df7a35925a01a2ac = L.marker(
+                [-19.9318, -43.9335],
+                {}
+            ).addTo(map_29e3dcf3344476b45b386ec71645fd51);
+        
+    
+            var icon_fdcf6cd6da7cbd85d16da44b632a47f0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_ae882cbda7807b83df7a35925a01a2ac.setIcon(icon_fdcf6cd6da7cbd85d16da44b632a47f0);
+        
+    
+        var popup_f2197a7794097b9ba2617ed2d76123ed = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0a088fa338d4a6d741cc5d155dab35ec = $(`<div id="html_0a088fa338d4a6d741cc5d155dab35ec" style="width: 100.0%; height: 100.0%;">WS Elétrico - 18h30</div>`)[0];
+            popup_f2197a7794097b9ba2617ed2d76123ed.setContent(html_0a088fa338d4a6d741cc5d155dab35ec);
+        
+
+        marker_ae882cbda7807b83df7a35925a01a2ac.bindPopup(popup_f2197a7794097b9ba2617ed2d76123ed)
+        ;
+
+        
+    
+    
+            marker_ae882cbda7807b83df7a35925a01a2ac.bindTooltip(
+                `<div>
+                     WS Elétrico
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_bdf9078d5ddf46d993008d1256ef31a7 = L.marker(
+                [-19.9391, -43.9218],
+                {}
+            ).addTo(map_29e3dcf3344476b45b386ec71645fd51);
+        
+    
+            var icon_38c6b5ca0a2b5b4755e2564010d0cbd6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_bdf9078d5ddf46d993008d1256ef31a7.setIcon(icon_38c6b5ca0a2b5b4755e2564010d0cbd6);
+        
+    
+        var popup_48e93dad0020ea5cbc97e1923a47ada6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7bde36abae6dd95ea91d7fdca4bb6486 = $(`<div id="html_7bde36abae6dd95ea91d7fdca4bb6486" style="width: 100.0%; height: 100.0%;">Bloco Fúnebre - 23h</div>`)[0];
+            popup_48e93dad0020ea5cbc97e1923a47ada6.setContent(html_7bde36abae6dd95ea91d7fdca4bb6486);
+        
+
+        marker_bdf9078d5ddf46d993008d1256ef31a7.bindPopup(popup_48e93dad0020ea5cbc97e1923a47ada6)
+        ;
+
+        
+    
+    
+            marker_bdf9078d5ddf46d993008d1256ef31a7.bindTooltip(
+                `<div>
+                     Bloco Fúnebre
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b242553df0e41e6c56870ce53de6f463 = L.marker(
+                [-19.938, -43.9267],
+                {}
+            ).addTo(map_29e3dcf3344476b45b386ec71645fd51);
+        
+    
+            var icon_b72e2e086f591f724acd6c0d2fc5e65d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_b242553df0e41e6c56870ce53de6f463.setIcon(icon_b72e2e086f591f724acd6c0d2fc5e65d);
+        
+    
+        var popup_0659bb89ad8fdd8718744ad7951d5fb7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fd5e011325c85e79dbbe1f0d887c453f = $(`<div id="html_fd5e011325c85e79dbbe1f0d887c453f" style="width: 100.0%; height: 100.0%;">Então, Brilha! - 04h</div>`)[0];
+            popup_0659bb89ad8fdd8718744ad7951d5fb7.setContent(html_fd5e011325c85e79dbbe1f0d887c453f);
+        
+
+        marker_b242553df0e41e6c56870ce53de6f463.bindPopup(popup_0659bb89ad8fdd8718744ad7951d5fb7)
+        ;
+
+        
+    
+    
+            marker_b242553df0e41e6c56870ce53de6f463.bindTooltip(
+                `<div>
+                     Então, Brilha!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e23e94b459b8512b94fd11a78302dd31 = L.marker(
+                [-19.9391, -43.9215],
+                {}
+            ).addTo(map_29e3dcf3344476b45b386ec71645fd51);
+        
+    
+            var icon_c01ffba5064e4d923989f96fc8c5f4ed = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_e23e94b459b8512b94fd11a78302dd31.setIcon(icon_c01ffba5064e4d923989f96fc8c5f4ed);
+        
+    
+        var popup_e3918a52ab16c0ff2fcd6e2831808517 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d762338ab8aa7a0c3d37ef7009cb0f3e = $(`<div id="html_d762338ab8aa7a0c3d37ef7009cb0f3e" style="width: 100.0%; height: 100.0%;">Quando Come Se Lambuza - 09h</div>`)[0];
+            popup_e3918a52ab16c0ff2fcd6e2831808517.setContent(html_d762338ab8aa7a0c3d37ef7009cb0f3e);
+        
+
+        marker_e23e94b459b8512b94fd11a78302dd31.bindPopup(popup_e3918a52ab16c0ff2fcd6e2831808517)
+        ;
+
+        
+    
+    
+            marker_e23e94b459b8512b94fd11a78302dd31.bindTooltip(
+                `<div>
+                     Quando Come Se Lambuza
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_90f30ce781c962e840bfc83a38194f76 = L.marker(
+                [-19.9237, -43.9146],
+                {}
+            ).addTo(map_29e3dcf3344476b45b386ec71645fd51);
+        
+    
+            var icon_23707238aeda2c8ab4959d4e282faf51 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_90f30ce781c962e840bfc83a38194f76.setIcon(icon_23707238aeda2c8ab4959d4e282faf51);
+        
+    
+        var popup_ed1b4ed87db21bd131bed6903df0dbf6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fae04a0413d7c6a0e66f40c512df1e96 = $(`<div id="html_fae04a0413d7c6a0e66f40c512df1e96" style="width: 100.0%; height: 100.0%;">Nada Santa - 12h</div>`)[0];
+            popup_ed1b4ed87db21bd131bed6903df0dbf6.setContent(html_fae04a0413d7c6a0e66f40c512df1e96);
+        
+
+        marker_90f30ce781c962e840bfc83a38194f76.bindPopup(popup_ed1b4ed87db21bd131bed6903df0dbf6)
+        ;
+
+        
+    
+    
+            marker_90f30ce781c962e840bfc83a38194f76.bindTooltip(
+                `<div>
+                     Nada Santa
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_afb1e7ddd4cf57f874be1910c95809e0 = L.marker(
+                [-19.9372, -43.9346],
+                {}
+            ).addTo(map_29e3dcf3344476b45b386ec71645fd51);
+        
+    
+            var icon_a844e6d68440f78e95a5d5d44494ec28 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_afb1e7ddd4cf57f874be1910c95809e0.setIcon(icon_a844e6d68440f78e95a5d5d44494ec28);
+        
+    
+        var popup_9b149c44025db1e7007710b222d42b66 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8283753d17df54e4928d272f28d10a73 = $(`<div id="html_8283753d17df54e4928d272f28d10a73" style="width: 100.0%; height: 100.0%;">Bloco do Kanella - 12h</div>`)[0];
+            popup_9b149c44025db1e7007710b222d42b66.setContent(html_8283753d17df54e4928d272f28d10a73);
+        
+
+        marker_afb1e7ddd4cf57f874be1910c95809e0.bindPopup(popup_9b149c44025db1e7007710b222d42b66)
+        ;
+
+        
+    
+    
+            marker_afb1e7ddd4cf57f874be1910c95809e0.bindTooltip(
+                `<div>
+                     Bloco do Kanella
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f4108ddac0944b2e7480188869ab7bbe = L.marker(
+                [-19.9198, -43.9242],
+                {}
+            ).addTo(map_29e3dcf3344476b45b386ec71645fd51);
+        
+    
+            var icon_504081d7080dcd090514f617cd041662 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_f4108ddac0944b2e7480188869ab7bbe.setIcon(icon_504081d7080dcd090514f617cd041662);
+        
+    
+        var popup_52d043b4bbb0104518ce101a6a87a766 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_113ce1a8a5f4dda2402617a68011231a = $(`<div id="html_113ce1a8a5f4dda2402617a68011231a" style="width: 100.0%; height: 100.0%;">Me Beija que Eu Sou Pagodeiro - 08h</div>`)[0];
+            popup_52d043b4bbb0104518ce101a6a87a766.setContent(html_113ce1a8a5f4dda2402617a68011231a);
+        
+
+        marker_f4108ddac0944b2e7480188869ab7bbe.bindPopup(popup_52d043b4bbb0104518ce101a6a87a766)
+        ;
+
+        
+    
+    
+            marker_f4108ddac0944b2e7480188869ab7bbe.bindTooltip(
+                `<div>
+                     Me Beija que Eu Sou Pagodeiro
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_777b3718c7fbd4e3010e019511beeed7 = L.marker(
+                [-19.9351, -43.926],
+                {}
+            ).addTo(map_29e3dcf3344476b45b386ec71645fd51);
+        
+    
+            var icon_d1beda9441c682225c4f2a14038d7986 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_777b3718c7fbd4e3010e019511beeed7.setIcon(icon_d1beda9441c682225c4f2a14038d7986);
+        
+    
+        var popup_e50ef7a66aa40d812b58cb8dcf71edbb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_57fb49e2233d7f9881575af1d6e96976 = $(`<div id="html_57fb49e2233d7f9881575af1d6e96976" style="width: 100.0%; height: 100.0%;">Filhos da PUC - 09h</div>`)[0];
+            popup_e50ef7a66aa40d812b58cb8dcf71edbb.setContent(html_57fb49e2233d7f9881575af1d6e96976);
+        
+
+        marker_777b3718c7fbd4e3010e019511beeed7.bindPopup(popup_e50ef7a66aa40d812b58cb8dcf71edbb)
+        ;
+
+        
+    
+    
+            marker_777b3718c7fbd4e3010e019511beeed7.bindTooltip(
+                `<div>
+                     Filhos da PUC
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_271d21cd0e64bc387454d9b90273d369 = L.marker(
+                [-19.9656, -43.9432],
+                {}
+            ).addTo(map_29e3dcf3344476b45b386ec71645fd51);
+        
+    
+            var icon_13e0b923aa779187b7d4b5316b7e186b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_271d21cd0e64bc387454d9b90273d369.setIcon(icon_13e0b923aa779187b7d4b5316b7e186b);
+        
+    
+        var popup_e3cfa286edd787bcf6600e5322206cc2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8bc691bdd276b7ff2b55331d58f1c772 = $(`<div id="html_8bc691bdd276b7ff2b55331d58f1c772" style="width: 100.0%; height: 100.0%;">Pacato Cidadão - 09h</div>`)[0];
+            popup_e3cfa286edd787bcf6600e5322206cc2.setContent(html_8bc691bdd276b7ff2b55331d58f1c772);
+        
+
+        marker_271d21cd0e64bc387454d9b90273d369.bindPopup(popup_e3cfa286edd787bcf6600e5322206cc2)
+        ;
+
+        
+    
+    
+            marker_271d21cd0e64bc387454d9b90273d369.bindTooltip(
+                `<div>
+                     Pacato Cidadão
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4663cb4bfec4389ebdf7c071ef70965c = L.marker(
+                [-19.9224, -43.9378],
+                {}
+            ).addTo(map_29e3dcf3344476b45b386ec71645fd51);
+        
+    
+            var icon_a499ac7c47281f55d8ec917a153d51fa = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_4663cb4bfec4389ebdf7c071ef70965c.setIcon(icon_a499ac7c47281f55d8ec917a153d51fa);
+        
+    
+        var popup_4ae7b6b0db6af9119ce9db7fd953dcef = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6831bb9b548d8d5ec909456d6229efb9 = $(`<div id="html_6831bb9b548d8d5ec909456d6229efb9" style="width: 100.0%; height: 100.0%;">Turma do Passinho - Raul Latrel - 10h</div>`)[0];
+            popup_4ae7b6b0db6af9119ce9db7fd953dcef.setContent(html_6831bb9b548d8d5ec909456d6229efb9);
+        
+
+        marker_4663cb4bfec4389ebdf7c071ef70965c.bindPopup(popup_4ae7b6b0db6af9119ce9db7fd953dcef)
+        ;
+
+        
+    
+    
+            marker_4663cb4bfec4389ebdf7c071ef70965c.bindTooltip(
+                `<div>
+                     Turma do Passinho - Raul Latrel
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3a433d4cfa25e24ef528081447c39f40 = L.marker(
+                [-19.9135, -43.9039],
+                {}
+            ).addTo(map_29e3dcf3344476b45b386ec71645fd51);
+        
+    
+            var icon_1b8aab01e1e67696c5de41edf300b1f4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_3a433d4cfa25e24ef528081447c39f40.setIcon(icon_1b8aab01e1e67696c5de41edf300b1f4);
+        
+    
+        var popup_e040991633d31c5b75d9872ad673b04f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_da464ee120fc3973e4b9fd65649aae36 = $(`<div id="html_da464ee120fc3973e4b9fd65649aae36" style="width: 100.0%; height: 100.0%;">Havaianas Usadas - 08h</div>`)[0];
+            popup_e040991633d31c5b75d9872ad673b04f.setContent(html_da464ee120fc3973e4b9fd65649aae36);
+        
+
+        marker_3a433d4cfa25e24ef528081447c39f40.bindPopup(popup_e040991633d31c5b75d9872ad673b04f)
+        ;
+
+        
+    
+    
+            marker_3a433d4cfa25e24ef528081447c39f40.bindTooltip(
+                `<div>
+                     Havaianas Usadas
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d77aa0d8f94a148da10e1295c71c239c = L.marker(
+                [-19.922, -43.9456],
+                {}
+            ).addTo(map_29e3dcf3344476b45b386ec71645fd51);
+        
+    
+            var icon_57b18b73903375f2c341bf39777a22d6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_d77aa0d8f94a148da10e1295c71c239c.setIcon(icon_57b18b73903375f2c341bf39777a22d6);
+        
+    
+        var popup_f26716ac31a0161f00cb5a795c537144 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e1958477950af2499c2cf72f639e27ea = $(`<div id="html_e1958477950af2499c2cf72f639e27ea" style="width: 100.0%; height: 100.0%;">Unidos do Barro Preto - 11h</div>`)[0];
+            popup_f26716ac31a0161f00cb5a795c537144.setContent(html_e1958477950af2499c2cf72f639e27ea);
+        
+
+        marker_d77aa0d8f94a148da10e1295c71c239c.bindPopup(popup_f26716ac31a0161f00cb5a795c537144)
+        ;
+
+        
+    
+    
+            marker_d77aa0d8f94a148da10e1295c71c239c.bindTooltip(
+                `<div>
+                     Unidos do Barro Preto
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e502bd51675896d2c1a172ba9ee94b81 = L.marker(
+                [-19.9286, -43.9212],
+                {}
+            ).addTo(map_29e3dcf3344476b45b386ec71645fd51);
+        
+    
+            var icon_6ea29e56e0276b6f656cd3293b5a0292 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_e502bd51675896d2c1a172ba9ee94b81.setIcon(icon_6ea29e56e0276b6f656cd3293b5a0292);
+        
+    
+        var popup_e2b246797e0bc38f3829e3733035e8c0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2455136609bc57d5a5ee700c80bd7490 = $(`<div id="html_2455136609bc57d5a5ee700c80bd7490" style="width: 100.0%; height: 100.0%;">Bloco Alalaor - 12h</div>`)[0];
+            popup_e2b246797e0bc38f3829e3733035e8c0.setContent(html_2455136609bc57d5a5ee700c80bd7490);
+        
+
+        marker_e502bd51675896d2c1a172ba9ee94b81.bindPopup(popup_e2b246797e0bc38f3829e3733035e8c0)
+        ;
+
+        
+    
+    
+            marker_e502bd51675896d2c1a172ba9ee94b81.bindTooltip(
+                `<div>
+                     Bloco Alalaor
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_431b77a4dd3b0d63bd784eb5afe2ea38 = L.marker(
+                [-20.0872, -44.4156],
+                {}
+            ).addTo(map_29e3dcf3344476b45b386ec71645fd51);
+        
+    
+            var icon_9f863e3f67fbb25d85e75fa0751d8204 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_431b77a4dd3b0d63bd784eb5afe2ea38.setIcon(icon_9f863e3f67fbb25d85e75fa0751d8204);
+        
+    
+        var popup_e02519041767485492c48d409aed4080 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_14e4934bc6286f97694322a7ce7cf347 = $(`<div id="html_14e4934bc6286f97694322a7ce7cf347" style="width: 100.0%; height: 100.0%;">Reinaldinho em Itatiaçu, MG - POSSIBILIDADE</div>`)[0];
+            popup_e02519041767485492c48d409aed4080.setContent(html_14e4934bc6286f97694322a7ce7cf347);
+        
+
+        marker_431b77a4dd3b0d63bd784eb5afe2ea38.bindPopup(popup_e02519041767485492c48d409aed4080)
+        ;
+
+        
+    
+    
+            marker_431b77a4dd3b0d63bd784eb5afe2ea38.bindTooltip(
+                `<div>
+                     Reinaldinho em Itatiaçu, MG
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_eb3cd0aec1136caafb4b28ec1faaa4a6 = L.marker(
+                [-19.9128, -43.9213],
+                {}
+            ).addTo(map_29e3dcf3344476b45b386ec71645fd51);
+        
+    
+            var icon_b5834741f8b493ebe205dc70be3decbf = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_eb3cd0aec1136caafb4b28ec1faaa4a6.setIcon(icon_b5834741f8b493ebe205dc70be3decbf);
+        
+    
+        var popup_c871d7099914e605bdd8dd70f0e1ad75 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2756f02779fbea222f71433c8b75e596 = $(`<div id="html_2756f02779fbea222f71433c8b75e596" style="width: 100.0%; height: 100.0%;">Juventude Bronzeada - 08h</div>`)[0];
+            popup_c871d7099914e605bdd8dd70f0e1ad75.setContent(html_2756f02779fbea222f71433c8b75e596);
+        
+
+        marker_eb3cd0aec1136caafb4b28ec1faaa4a6.bindPopup(popup_c871d7099914e605bdd8dd70f0e1ad75)
+        ;
+
+        
+    
+    
+            marker_eb3cd0aec1136caafb4b28ec1faaa4a6.bindTooltip(
+                `<div>
+                     Juventude Bronzeada
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6ea1dbaf38c48b8e248468a890e10fd9 = L.marker(
+                [-19.9237, -43.9146],
+                {}
+            ).addTo(map_29e3dcf3344476b45b386ec71645fd51);
+        
+    
+            var icon_a6b4b9c2fedd7b5b26b5fe51433b9036 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_6ea1dbaf38c48b8e248468a890e10fd9.setIcon(icon_a6b4b9c2fedd7b5b26b5fe51433b9036);
+        
+    
+        var popup_95d2c3488449f5c34073e7a5e8f52045 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c7d66013633c2eaf48c796a126036dcf = $(`<div id="html_c7d66013633c2eaf48c796a126036dcf" style="width: 100.0%; height: 100.0%;">Bloco do Odilara - 09h</div>`)[0];
+            popup_95d2c3488449f5c34073e7a5e8f52045.setContent(html_c7d66013633c2eaf48c796a126036dcf);
+        
+
+        marker_6ea1dbaf38c48b8e248468a890e10fd9.bindPopup(popup_95d2c3488449f5c34073e7a5e8f52045)
+        ;
+
+        
+    
+    
+            marker_6ea1dbaf38c48b8e248468a890e10fd9.bindTooltip(
+                `<div>
+                     Bloco do Odilara
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_447af5d634c95056ca707276dd3e9570 = L.marker(
+                [-19.8969, -43.9095],
+                {}
+            ).addTo(map_29e3dcf3344476b45b386ec71645fd51);
+        
+    
+            var icon_e679843a4f117f17e10da8a1e2882937 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_447af5d634c95056ca707276dd3e9570.setIcon(icon_e679843a4f117f17e10da8a1e2882937);
+        
+    
+        var popup_7785632aae97c7a5d1084d5fbf937c06 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9b2ab747f8806541e2485b60602e5f8c = $(`<div id="html_9b2ab747f8806541e2485b60602e5f8c" style="width: 100.0%; height: 100.0%;">Bloco Fita Amarela - 09h</div>`)[0];
+            popup_7785632aae97c7a5d1084d5fbf937c06.setContent(html_9b2ab747f8806541e2485b60602e5f8c);
+        
+
+        marker_447af5d634c95056ca707276dd3e9570.bindPopup(popup_7785632aae97c7a5d1084d5fbf937c06)
+        ;
+
+        
+    
+    
+            marker_447af5d634c95056ca707276dd3e9570.bindTooltip(
+                `<div>
+                     Bloco Fita Amarela
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_50f4473690efbe1bf365e885ac63f2e9 = L.marker(
+                [-19.9243, -43.944],
+                {}
+            ).addTo(map_29e3dcf3344476b45b386ec71645fd51);
+        
+    
+            var icon_71d511c20a37f16cd3bf6bfc1c34e65b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_50f4473690efbe1bf365e885ac63f2e9.setIcon(icon_71d511c20a37f16cd3bf6bfc1c34e65b);
+        
+    
+        var popup_c6bf532e1d44b5300758cb1bb8ab888d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cdee7318175174dc60a6c89a27399bb6 = $(`<div id="html_cdee7318175174dc60a6c89a27399bb6" style="width: 100.0%; height: 100.0%;">Lavô, Tá Novo! - 13h</div>`)[0];
+            popup_c6bf532e1d44b5300758cb1bb8ab888d.setContent(html_cdee7318175174dc60a6c89a27399bb6);
+        
+
+        marker_50f4473690efbe1bf365e885ac63f2e9.bindPopup(popup_c6bf532e1d44b5300758cb1bb8ab888d)
+        ;
+
+        
+    
+    
+            marker_50f4473690efbe1bf365e885ac63f2e9.bindTooltip(
+                `<div>
+                     Lavô, Tá Novo!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6adde406b0bc4dfb4092aeb15c5bdebc = L.marker(
+                [-20.0872, -44.4156],
+                {}
+            ).addTo(map_29e3dcf3344476b45b386ec71645fd51);
+        
+    
+            var icon_0723179296157e2aa8a6c8fc5a736097 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_6adde406b0bc4dfb4092aeb15c5bdebc.setIcon(icon_0723179296157e2aa8a6c8fc5a736097);
+        
+    
+        var popup_532d90fb227c783140ca9bf69a756ee9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6096516c9626890c420f306faad0ebed = $(`<div id="html_6096516c9626890c420f306faad0ebed" style="width: 100.0%; height: 100.0%;">Piscina e churrasco em Itatiaçu, MG - POSSIBILIDADE</div>`)[0];
+            popup_532d90fb227c783140ca9bf69a756ee9.setContent(html_6096516c9626890c420f306faad0ebed);
+        
+
+        marker_6adde406b0bc4dfb4092aeb15c5bdebc.bindPopup(popup_532d90fb227c783140ca9bf69a756ee9)
+        ;
+
+        
+    
+    
+            marker_6adde406b0bc4dfb4092aeb15c5bdebc.bindTooltip(
+                `<div>
+                     Piscina e churrasco em Itatiaçu, MG
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>
